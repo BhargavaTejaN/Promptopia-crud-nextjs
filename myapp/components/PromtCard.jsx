@@ -51,12 +51,13 @@ const PromtCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
                 : "/assets/icons/copy.svg"
             }
             alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
-            width={12}
-            height={12}
+            width={18}
+            height={18}
           />
         </div>
       </div>
-      <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
+      <h1 className="my-4 font-satoshi head_text1 text-center">{post.title}</h1>
+      <p className="my-4 line-clamp-2 font-satoshi text-sm text-gray-700">{post.prompt}</p>
       <p
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}
